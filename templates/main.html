@@ -97,18 +97,41 @@
 <body>
     <nav class="navbar">
         <ul class="nav-list">
-            <li><a href="{{}}">Home</a></li>
+            <li><a href="{{url_for('homepage')}}">Home</a></li>
             <li><a href="{{ url_for('about') }}">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{ url_for('issues') }}">Issues</a></li>
+
         </ul>
         <div class="rightNav">
-            <input type="text" name="search" id="search" placeholder="Search">
+            <input type="text" name="search" id="search" placeholder="Search Articles">
             <button class="btn btn-sm">Search</button>
         </div>
     </nav>
-</body>
 
+
+
+    <script>
+        $('#spanYear').html(new Date().getFullYear());
+      </script>
+
+<footer>
+    <center>
+        <div> Copyright © <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> Staples Code for A Cause Club. All Rights Reserved.
+
+        </div>
+<style>
+    p{
+        font-size: 20%;
+    }
+</style>
+        <div id="footext">
+                <p>
+                This site is registered and operated under an approved club of Staples High School. Designed by Matt Anto. 
+                </p> 
+        </div>
+    
+    </center>
+</footer>
       
-</body>
+  
 </html>
