@@ -2,10 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Most Recent Issues</title>
+
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            position: sticky;
+            align-items: center;
+            justify-content: space-between;
+            top: 0px;
+            background: rgb(5, 132, 216);
+            background-blend-mode: darken;
+            background-size: cover;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-list li a:hover {
+            color: #8c8c8b;
+            /* Change the color on hover */
+        }
+
+        .rightNav {
+            text-align: right;
+        }
+
+        #search {
+            padding: 8px;
+            font-size: 16px;
+            border: 2px solid #abababce;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #0039bd;
+            color: #000;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #000;
+            /* Change the background color on hover */
+            color: #c5c5c1;
+        }
+
+    </style>
+
 </head>
+
+
+
 <body>
-    
+    <center>
+        <a href="{{ url_for('homepage') }}">
+            <img src="static/styles/title.png">
+
+        </a>
+    </center>
+
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="{{url_for('homepage')}}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('issues') }}">Issues</a></li>
+
+        </ul>
+
+    <div class="rightNav">
+        <input type="text" name="search" id="search" placeholder="Search Articles">
+        <button class="btn btn-sm">Search</button>
+    </div>
+</nav>
+
+
+
+    <center>
+        <p>
+            <a href="{{ url_for('issue1') }}">March 2025 Issue</a>
+        </p>    
+    </center>
+
 </body>
+
+
+<style>
+    footer{
+        font-size: 20%;
+    }
+</style>
+<footer>
+    <center>
+        <div> Copyright © <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> Staples Code for A Cause Club. All Rights Reserved.
+
+        </div>
+        <div id="footext">
+                <p>
+                This site is unaffiliated with Staples High School. Designed by Matt Anto. 
+                </p> 
+        </div>
+    
+    </center>
+
+</footer>
 </html>
