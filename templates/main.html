@@ -89,19 +89,22 @@
         .btn:hover {
             background-color: #000;
             /* Change the background color on hover */
-            color: #ffd700;
+            color: #c5c5c1;
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="{{url_for('homepage')}}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About Us</a></li>
-            <li><a href="{{ url_for('issues') }}">Issues</a></li>
-
-        </ul>
+    <center>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="{{url_for('homepage')}}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('issues') }}">Issues</a></li>
+    
+            </ul>
+    
+    </center>
         <div class="rightNav">
             <input type="text" name="search" id="search" placeholder="Search Articles">
             <button class="btn btn-sm">Search</button>
